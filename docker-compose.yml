@@ -17,7 +17,13 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
       - zookeeper
-
+  # -----------------------
+  kafka-writer:
+    build:
+      context: services/kafka-writer
+    image: kafka-writer
+    ports:
+      - 9990:9999    
 
 
 
